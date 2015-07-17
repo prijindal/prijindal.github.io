@@ -68,11 +68,13 @@ gulp.task('sass', function () {
   ;
 });
 
+var port = process.env.PORT || 5000;
+var socket = '0.0.0.0';
 gulp.task('server',['build'], function() {
   gulp.src('./build')
   .pipe($.webserver({
-    port:8081,
-    host:'localhost',
+    port:port,
+    host:socket,
     reload:true
   }))
 })
