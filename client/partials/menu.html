@@ -6,10 +6,11 @@
   <div id="navigation">
     <div id="navigationContent">
       <ul>
-        <li><a class="active" href="#/home">Home</a></li>
-        <li><a class="active" href="#/about">About</a></li>
-        <li><a class="active" href="#/contact">Contact</a></li>
+        <li><a class="active" ng-click="loader.loading = true" href="#/home">Home</a></li>
+        <li><a class="active" ng-click="loader.loading = true" href="#/about">About</a></li>
+        <li><a class="active" ng-click="loader.loading = true" href="#/contact">Contact</a></li>
       </ul>
     </div>
   </div>
 </div>
+<div id="loading" ng-show="loader.loading">Loading</div>

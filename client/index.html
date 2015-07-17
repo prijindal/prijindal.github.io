@@ -16,7 +16,7 @@
       <div id="container" ng-controller = "globalController">
         <div id="navContainer" ng-include="'partials/menu.html'">
         </div>
-        <div id="mainContainer" ng-view>
+        <div ng-hide="loader.loading" id="mainContainer" ng-view>
 
         </div>
         <div id="footerContainer" ng-include="'partials/footer.html'">
@@ -25,6 +25,6 @@
 
 
     </div>
-    <script type="text/javascript" src="js/analytics.js"></script>
+    <!--script type="text/javascript" src="js/analytics.js"></script-->
   </body>
 </html>
