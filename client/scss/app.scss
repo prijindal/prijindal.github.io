@@ -79,15 +79,16 @@ $button-colour:transparent;
                     margin-left:1em;
                     margin-right: 1em;
                 }
+                &.active a{
+                  border-bottom-color:$text-color;
+                  cursor: default;
+                }
                 a {
                     background-color: $button-colour;
                     padding: 1em 0;
                     font-weight: bold;
                     border-bottom:2px solid transparent;
                     outline: none;
-                    &.active{
-                        border-bottom-color:$text-color;
-                    }
                     &:hover {
                         border-bottom-color:darken($text-color,30%);
                     }
@@ -99,9 +100,22 @@ $button-colour:transparent;
         }
     }
     #loading {
-      width:100px;
-      margin:0 auto;
       text-align: center;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      min-height: 100%;
+      position: relative;
     }
 }
 
