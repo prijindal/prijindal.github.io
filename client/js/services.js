@@ -21,3 +21,13 @@ portfolioApp.factory('menuHandler', function() {
     onPage: onPage
   }
 })
+
+portfolioApp.factory('submitForm', function() {
+  var submit = function() {
+    console.log('Submitting...');
+  }
+
+  return {
+    submit:submit
+  }
+})

@@ -32,7 +32,9 @@ portfolioApp.controller('aboutController', function($scope, menuHandler) {
   menuHandler.onPage('about')
 })
 
-portfolioApp.controller('contactsController', function($scope, menuHandler) {
+portfolioApp.controller('contactsController', function($scope, menuHandler, submitForm) {
   $scope.loaded('contact')
   menuHandler.onPage('contact')
+
+  $scope.submit = submitForm.submit
 })
