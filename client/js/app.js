@@ -1,4 +1,5 @@
 'use strict';
+var SITES = ['home', 'about', 'works', 'contact'];
 
 var portfolioApp = angular.module('portfolioApp', [
   'ngRoute'
@@ -19,6 +20,10 @@ portfolioApp.config(['$routeProvider',
         templateUrl : 'templates/contact.html',
         controller : 'contactsController'
       }).
+      when('/works', {
+        templateUrl: 'templates/works.html',
+        controller: 'worksController'
+      }).
       otherwise({
         redirectTo: '/home'
       });
@@ -27,5 +32,5 @@ portfolioApp.config(['$routeProvider',
 
 // Preventing selection of element
 document.addEventListener('mousedown', function(event) {
-  event.preventDefault()
+  //event.preventDefault()
 })

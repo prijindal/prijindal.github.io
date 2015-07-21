@@ -17,7 +17,6 @@ portfolioApp.factory('menuHandler', function() {
   }
 
   return {
-    value:true,
     onPage: onPage
   }
 })
@@ -29,5 +28,27 @@ portfolioApp.factory('submitForm', function() {
 
   return {
     submit:submit
+  }
+})
+
+portfolioApp.factory('contactDetails', function() {
+  var details = {
+    email:'priyanshujindal1995@gmail.com',
+    fb:{
+      user:'prijindal',
+      link:'http://facebook.com/prijindal'
+    },
+    github:{
+      user:'prijindal',
+      link:'http://github.com/prijindal'
+    },
+    tweet:{
+      user:'@prijindal',
+      link:'http://twitter.com/prijindal'
+    }
+  }
+
+  return {
+    details:details
   }
 })

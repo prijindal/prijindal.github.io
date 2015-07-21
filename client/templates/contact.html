@@ -1,7 +1,24 @@
-<div class="">
-  <form class="" method="post">
-    <div id="button">
-      <button href="#/" ng-click="submit()">Mail</button>
-    </div>
-  </form>
-</div>
+<main>
+  <div id="contact">
+    <form class="" method="post">
+      <div class="inputs">
+        <input type="text" ng-model="form.name" placeholder="Enter Your Name">
+        <input type="email" ng-model="form.email" placeholder="Enter Your Email">
+      </div>
+      <div class="textarea">
+        <textarea ng-model="form.message" placeholder="Enter Message" rows="4"></textarea>
+      </div>
+      <div id="button">
+        <button href="#/" ng-click="submit()">Mail</button>
+      </div>
+    </form>
+    <p>Or</p>
+    <p>Mail me at <a href="mailto:{{myDetails.email}}">{{myDetails.email}}</a></p>
+    <p>Or</p>
+    <p>Meet me on Facebook: <a ng-href="{{myDetails.fb.link}}">{{myDetails.fb.user}}</a></p>
+    <p>Or</p>
+    <p>Visit me on Github: <a ng-href="{{myDetails.github.link}}">{{myDetails.github.user}}</a></p>
+    <p>Or</p>
+    <p>Send me a Tweet: <a ng-href="{{myDetails.tweet.link}}">{{myDetails.tweet.user}}</a></p>
+  </div>
+</main>
