@@ -1,15 +1,15 @@
 <main>
   <div id="contact">
-    <form class="" method="post">
+    <form class="" method="post" ng-submit="submit(form)">
       <div class="inputs">
-        <input type="text" ng-model="form.name" placeholder="Enter Your Name">
-        <input type="email" ng-model="form.email" placeholder="Enter Your Email">
+        <input type="text" ng-model="form.name" placeholder="Enter Your Name" required>
+        <input type="email" ng-model="form.emails" placeholder="Enter Your Email" ng-list required>
       </div>
       <div class="textarea">
-        <textarea ng-model="form.message" placeholder="Enter Message" rows="4"></textarea>
+        <textarea ng-model="form.message" placeholder="Enter Message" rows="4" required></textarea>
       </div>
       <div id="button">
-        <button href="#/" ng-click="submit()">Mail</button>
+        <button>Mail</button>
       </div>
     </form>
     <p>Or</p>

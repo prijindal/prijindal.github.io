@@ -1,3 +1,30 @@
+portfolioApp.factory('loadingHandler', function() {
+
+    var loading = function(element) {
+      if(loader[element]){
+        loader.loading = true;
+      }
+    }
+
+    var loaded = function(element) {
+      loader.loading = false;
+      loader[element] = true
+    }
+
+    loader = {
+       loading : true,
+       loadPage : loading,
+       loaded: loaded
+     }
+     for (var i = 0; i < SITES.length; i++) {
+       loader[SITES[i]] = false
+     }
+
+    return {
+      loader:loader
+    }
+})
+
 portfolioApp.factory('menuHandler', function() {
 
   var showAll = function() {
@@ -21,13 +48,24 @@ portfolioApp.factory('menuHandler', function() {
   }
 })
 
-portfolioApp.factory('submitForm', function() {
-  var submit = function() {
-    console.log('Submitting...');
+portfolioApp.factory('submitForm', function($cookies) {
+  var submit = function(formDetails) {
+    console.log(formDetails);
+  }
+
+  var formData = {
+    name:"",
+    emails:[]
+  }
+
+  var saveDetails = function(formDetails, type) {
+    formData[type] = formDetails
+    $cookies.put('formData', formData)
   }
 
   return {
-    submit:submit
+    submit:submit,
+    saveDetails:saveDetails
   }
 })
 

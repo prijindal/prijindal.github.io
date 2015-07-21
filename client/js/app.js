@@ -2,7 +2,8 @@
 var SITES = ['home', 'about', 'works', 'contact'];
 
 var portfolioApp = angular.module('portfolioApp', [
-  'ngRoute'
+  'ngRoute',
+  'ngCookies'
 ]);
 
 portfolioApp.config(['$routeProvider',

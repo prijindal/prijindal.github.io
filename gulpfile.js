@@ -15,6 +15,7 @@ var paths = {
   ],
   angular:[
     './bower_components/angular/angular.min.js',
+    './bower_components/angular-cookies/angular-cookies.min.js',
     './bower_components/angular-route/angular-route.min.js'
   ]
 }
