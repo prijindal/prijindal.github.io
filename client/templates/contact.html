@@ -3,11 +3,12 @@
     <form class="" method="post" ng-submit="submit(form)">
       <div class="inputs">
         <input type="text" ng-model="form.name" placeholder="Enter Your Name" required>
-        <input type="email" ng-model="form.emails" placeholder="Enter Your Email" ng-list required>
+        <input type="email" ng-model="form.email" placeholder="Enter Your Email" required>
       </div>
       <div class="textarea">
         <textarea ng-model="form.message" placeholder="Enter Message" rows="4" required></textarea>
       </div>
+      <p class="small"><a ng-click="resetForm()">Clear</a> all the fields</p>
       <div id="button">
         <button>Mail</button>
       </div>

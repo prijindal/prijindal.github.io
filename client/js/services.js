@@ -50,22 +50,31 @@ portfolioApp.factory('menuHandler', function() {
 
 portfolioApp.factory('submitForm', function($cookies) {
   var submit = function(formDetails) {
-    console.log(formDetails);
+    console.log('Submitting...' + formDetails);
   }
 
-  var formData = {
-    name:"",
-    emails:[]
-  }
+  var formData = {}
 
   var saveDetails = function(formDetails, type) {
     formData[type] = formDetails
-    $cookies.put('formData', formData)
+
+    $cookies.putObject('formData', formData)
+  }
+
+  var getDetails = function() {
+    return $cookies.getObject('formData')
+  }
+
+  var reset = function() {
+    formData = {}
+    $cookies.remove('formData')
   }
 
   return {
     submit:submit,
-    saveDetails:saveDetails
+    saveDetails:saveDetails,
+    getDetails:getDetails,
+    reset:reset
   }
 })
 
@@ -73,14 +82,17 @@ portfolioApp.factory('contactDetails', function() {
   var details = {
     email:'priyanshujindal1995@gmail.com',
     fb:{
+      type:'facebook',
       user:'prijindal',
       link:'http://facebook.com/prijindal'
     },
     github:{
+      type:'github',
       user:'prijindal',
       link:'http://github.com/prijindal'
     },
     tweet:{
+      type:'twitter',
       user:'@prijindal',
       link:'http://twitter.com/prijindal'
     }

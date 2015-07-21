@@ -29,9 +29,3 @@ portfolioApp.config(['$routeProvider',
         redirectTo: '/home'
       });
   }]);
-
-
-// Preventing selection of element
-document.addEventListener('mousedown', function(event) {
-  //event.preventDefault()
-})

@@ -19,18 +19,29 @@ portfolioApp.controller('worksController', function($scope, menuHandler, loading
   menuHandler.onPage('works')
 })
 
-portfolioApp.controller('contactsController', function($scope, menuHandler, submitForm, contactDetails) {
-  loader.loaded('contact')
+portfolioApp.controller('contactsController', function($scope, menuHandler, loadingHandler, submitForm, contactDetails) {
+  loadingHandler.loader.loaded('contact')
   menuHandler.onPage('contact')
 
   $scope.submit = submitForm.submit
+  $scope.resetForm = function() {
+    submitForm.reset()
+    delete $scope.form
+  }
+
   $scope.myDetails = contactDetails.details
+  $scope.form = submitForm.getDetails()
 
   $scope.$watch('form.name', function(newValue) {
     submitForm.saveDetails(newValue, 'name')
   })
 
-  $scope.$watch('form.emails', function(newValue) {
-    submitForm.saveDetails(newValue, 'emails')
+  $scope.$watch('form.email', function(newValue) {
+    submitForm.saveDetails(newValue, 'email')
   })
+})
+
+portfolioApp.controller('footerController', function($scope, contactDetails) {
+  $scope.footerContact = contactDetails.details
+  delete $scope.footerContact.email
 })
