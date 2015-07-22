@@ -25,7 +25,7 @@ html,body {
             @media (max-width: $media-query) {
               padding-top: $nav-height*1.8;
             }
-            @media (max-width: 300px) {
+            @media (max-width: 500px) {
                 padding-top: $nav-height*3;
             }
         }

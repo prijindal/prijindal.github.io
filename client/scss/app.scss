@@ -15,23 +15,20 @@ $button-colour:transparent;
 @import 'footer';
 @import 'additionals';
 
-@mixin inputs {
-    display: block;
-    position: relative;
-    height: auto;
-    box-sizing: border-box;
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    color:#555;
-    border:1px solid #ccc;
-    &:focus {
-      border-color: #66AFE9;
-      outline: 0;
-      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),0 0 8px rgba(102, 175, 233, 0.6);
+@mixin card {
+  .title {
+    text-align: left;
+    padding-left:100px;
+    border-bottom: 1px solid #FFF;
+    @media (max-width: $media-query) {
+      text-align: center;
+      padding-left:0;
     }
+  }
+  .container {
+    margin-top:20px;
+  }
 }
-
 
 #mainContainer {
     main {
@@ -99,11 +96,16 @@ $button-colour:transparent;
 #about {
   #basic {
     max-width: 800px;
-    display: flex;
-    flex-direction: row;
-    @media (max-width: $media-query) {
-      flex-direction: column;
+    @include card;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      @media (max-width: $media-query) {
+        flex-direction: column;
+      }
     }
+
     #picture {
       flex:2;
       img {
@@ -126,5 +128,8 @@ $button-colour:transparent;
         font-size: 1.2rem;
       }
     }
+  }
+  #degrees {
+    @include card;
   }
 }

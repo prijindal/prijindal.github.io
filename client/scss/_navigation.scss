@@ -34,18 +34,29 @@
                 font-weight: normal;
             }
         }
-        #navigation ul {
+        #navigation
+        {
+          @media (max-width: 500px) {
+              width: 100%;
+              ul {
+                flex-direction: column;
+              }
+              li {
+                a {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                }
+              }
+          }
+          ul {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            @media (max-width: 300px) {
-                flex-direction: column;
-            }
             li {
                 margin: 1em 1.5em;
                 @media (max-width: $media-query) {
-                    margin-left:1em;
-                    margin-right: 1em;
+                    margin:0 1em;
                 }
                 &.active a{
                   border-bottom-color:$text-color;
@@ -66,6 +77,7 @@
                 }
             }
         }
+      }
     }
     #loading {
       text-align: center;
