@@ -1,26 +1,50 @@
 'use strict';
 
-portfolioApp.controller('globalController', function($scope, loadingHandler) {
-  $scope.loading = loadingHandler.loader.loadPage
+portfolioApp.controller('globalController', function($scope) {
+
+  var loading = function(element) {
+    if(!$scope.loader[element]){
+      $scope.loader.loading = true;
+    }
+  }
+
+  var loaded = function(element) {
+    $scope.loader.loading = false;
+    $scope.loader[element] = true
+  }
+
+  $scope.loader = {
+     loading : true,
+     loadPage : loading,
+     loaded: loaded
+   }
+
+  for (var i = 0; i < SITES.length; i++) {
+    $scope.loader[SITES[i]] = false
+  }
+
 })
 
-portfolioApp.controller('homeController', function($scope, menuHandler, loadingHandler) {
-  loadingHandler.loader.loaded('home')
+portfolioApp.controller('homeController', function($scope, menuHandler, homeDetails) {
+  $scope.loader.loaded('home')
   menuHandler.onPage('home')
+
+  $scope.homeDetails = homeDetails.details
+  console.log($scope.homeDetails);
 })
 
-portfolioApp.controller('aboutController', function($scope, menuHandler, loadingHandler) {
-  loadingHandler.loader.loaded('about')
+portfolioApp.controller('aboutController', function($scope, menuHandler) {
+  $scope.loader.loaded('about')
   menuHandler.onPage('about')
 })
 
-portfolioApp.controller('worksController', function($scope, menuHandler, loadingHandler) {
-  loadingHandler.loader.loaded('works')
+portfolioApp.controller('worksController', function($scope, menuHandler) {
+  $scope.loader.loaded('works')
   menuHandler.onPage('works')
 })
 
-portfolioApp.controller('contactsController', function($scope, menuHandler, loadingHandler, submitForm, contactDetails) {
-  loadingHandler.loader.loaded('contact')
+portfolioApp.controller('contactsController', function($scope, menuHandler, submitForm, contactDetails) {
+  $scope.loader.loaded('contact')
   menuHandler.onPage('contact')
 
   $scope.submit = submitForm.submit

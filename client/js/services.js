@@ -1,30 +1,3 @@
-portfolioApp.factory('loadingHandler', function() {
-
-    var loading = function(element) {
-      if(loader[element]){
-        loader.loading = true;
-      }
-    }
-
-    var loaded = function(element) {
-      loader.loading = false;
-      loader[element] = true
-    }
-
-    loader = {
-       loading : true,
-       loadPage : loading,
-       loaded: loaded
-     }
-     for (var i = 0; i < SITES.length; i++) {
-       loader[SITES[i]] = false
-     }
-
-    return {
-      loader:loader
-    }
-})
-
 portfolioApp.factory('menuHandler', function() {
 
   var showAll = function() {
@@ -45,6 +18,17 @@ portfolioApp.factory('menuHandler', function() {
 
   return {
     onPage: onPage
+  }
+})
+
+portfolioApp.factory('homeDetails', function() {
+  var details = {
+    title:'Priyanshu Jindal',
+    content:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. '
+  }
+
+  return {
+    details:details
   }
 })
 
