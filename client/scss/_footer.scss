@@ -10,11 +10,6 @@
             align-self: center;
         }
         li {
-            @media (max-width: 480px) {
-                &:nth-child(1n+2) {
-                    display: none;
-                }
-            }
             .weak {
                 color:darken($text-color,50%);
             }
