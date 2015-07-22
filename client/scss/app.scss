@@ -1,7 +1,7 @@
 $nav-height:100px;
 
 $footer-height:110px;
-$media-query:680px;
+$media-query:700px;
 $main-width:1000px;
 
 $background-color:#333;
@@ -27,6 +27,15 @@ $button-colour:transparent;
   }
   .container {
     margin-top:20px;
+    margin-bottom: 20px;
+  }
+}
+
+
+@mixin paddingFix {
+  padding-top: $nav-height*0.50;
+  @media (max-width: $media-query) {
+    min-width:initial;
   }
 }
 
@@ -43,10 +52,7 @@ $button-colour:transparent;
 
 #contact {
   min-width: 400px;
-  padding-top: $nav-height;
-  @media (max-width: $media-query) {
-    min-width:initial;
-  }
+  @include paddingFix;
   form {
     .inputs {
       margin:10px 0;
@@ -94,6 +100,7 @@ $button-colour:transparent;
 }
 
 #about {
+  @include paddingFix;
   #basic {
     max-width: 800px;
     @include card;
@@ -129,7 +136,7 @@ $button-colour:transparent;
       }
     }
   }
-  #degrees {
+  #degrees,#achievments {
     @include card;
   }
 }
