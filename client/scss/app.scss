@@ -39,6 +39,33 @@ $button-colour:transparent;
   }
 }
 
+@mixin infoCardWrapper {
+  .container {
+    display: flex;
+    flex-direction: row;
+    @media (max-width: $media-query) {
+      flex-direction: column;
+    }
+  }
+}
+
+@mixin infoCard {
+  .picture {
+    flex:2;
+    img {
+      //Temp // Make it responsive bitch
+      width:200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+  }
+  .info {
+    flex:3;
+    padding:20px;
+    text-align: left;
+  }
+}
+
 #mainContainer {
     main {
         text-align: center;
@@ -105,27 +132,9 @@ $button-colour:transparent;
     max-width: 800px;
     @include card;
 
-    .container {
-      display: flex;
-      flex-direction: row;
-      @media (max-width: $media-query) {
-        flex-direction: column;
-      }
-    }
-
-    #picture {
-      flex:2;
-      img {
-        //Temp // Make it responsive bitch
-        width:200px;
-        height: 200px;
-        border-radius: 50%;
-      }
-    }
-    #info {
-      flex:3;
-      padding:20px;
-      text-align: left;
+    @include infoCardWrapper;
+    @include infoCard;
+    .info {
       #mainInfo {
         font-size: 2rem;
         margin-bottom: 10px;
@@ -138,5 +147,36 @@ $button-colour:transparent;
   }
   #degrees,#achievments {
     @include card;
+  }
+  #degrees {
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .degree {
+        flex:0 0 50%;
+        @media (max-width: $media-query) {
+          flex:0 0 100%;
+        }
+      }
+    }
+  }
+}
+
+#works {
+  @include paddingFix;
+  .work {
+    max-width: 800px;
+    @include card;
+
+    @include infoCardWrapper;
+    @include infoCard;
+    .info {
+      #description {
+        margin-top:10px;
+        font-size: 1.2rem;
+        min-width: 360px;
+      }
+    }
   }
 }

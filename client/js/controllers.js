@@ -1,7 +1,6 @@
 'use strict';
 
-portfolioApp.controller('globalController', function($scope) {
-
+portfolioApp.controller('globalController', function($scope, menuHandler) {
   var loading = function(element) {
     if(!$scope.loader[element]){
       $scope.loader.loading = true;
@@ -22,7 +21,6 @@ portfolioApp.controller('globalController', function($scope) {
   for (var i = 0; i < SITES.length; i++) {
     $scope.loader[SITES[i]] = false
   }
-
 })
 
 portfolioApp.controller('homeController', function($scope, menuHandler, homeDetails) {
@@ -30,7 +28,6 @@ portfolioApp.controller('homeController', function($scope, menuHandler, homeDeta
   menuHandler.onPage('home')
 
   $scope.homeDetails = homeDetails.details
-  console.log($scope.homeDetails);
 })
 
 portfolioApp.controller('aboutController', function($scope, menuHandler) {
