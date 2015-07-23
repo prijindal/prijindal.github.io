@@ -154,6 +154,7 @@ $button-colour:transparent;
       flex-direction: row;
       flex-wrap: wrap;
       .degree {
+        padding: 20px 0;
         flex:0 0 50%;
         @media (max-width: $media-query) {
           flex:0 0 100%;
@@ -175,7 +176,6 @@ $button-colour:transparent;
       #description {
         margin-top:10px;
         font-size: 1.2rem;
-        min-width: 360px;
       }
     }
   }

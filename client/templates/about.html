@@ -6,42 +6,34 @@
       </div>
       <div class="container">
         <div class="picture">
-          <img src="favicon.ico">
+          <img ng-src="{{about.basic.img}}">
         </div>
         <div class="info">
           <div id=mainInfo>
-            B.Tech CSE
+            {{about.basic.main}}
           </div>
           <div id="description">
-            I am a web developer in India, with expertise in both Front and back end.
-            Also i am an enginnering student in my 2<span class="superscript">nd</span> year.
+            {{about.basic.description}}
           </div>
         </div>
       </div>
     </div>
-    <div id="degrees">
+    <div ng-show="about.degrees.length" id="degrees">
       <div class="title">
         <h2>Degrees</h2>
       </div>
       <div class="container">
-        <div class="degree">
-          ABCD
+        <div ng-repeat="degree in about.degrees" class="degree">
+          {{degree}}
         </div>
-        <div class="degree">
-          ABCDEFGH
-        </div>
-        <div class="degree">
-          ABCDEFGH
-        </div>
-        {{degreees}}
       </div>
     </div>
     <div id="achievments">
-      <div class="title">
+      <div ng-show="about.achievments.length" class="title">
         <h2>Achievments</h2>
       </div>
-      <div class="container">
-        {{achievments}}
+      <div ng-repeat="achievment in about.achievments" class="container">
+        {{achievment}}
       </div>
       <div id="button">
         <a ng-href="#/works">What I've Done</a>

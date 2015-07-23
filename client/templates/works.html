@@ -3,17 +3,17 @@
     <div class="title">
       <h1>My Works</h1>
     </div>
-    <div class="work">
+    <div ng-repeat="work in works" class="work">
       <div class="title">
-        <h2>Social Book</h2>
+        <h2>{{work.title}}</h2>
       </div>
       <div class="container">
         <div class="picture">
-          <img src="favicon.ico">
+          <img ng-src="{{work.img}}">
         </div>
         <div class="info">
-          <div id="description">
-            A Social Networking
+          <div id="description" length="54">
+            {{work.description}}
           </div>
         </div>
       </div>

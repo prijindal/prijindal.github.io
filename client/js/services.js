@@ -32,6 +32,41 @@ portfolioApp.factory('homeDetails', function() {
   }
 })
 
+portfolioApp.factory('aboutDetails', function() {
+  var about = {
+    basic:{
+      img:'/favicon.ico',
+      main:'B.Tech CSE',
+      description:'I am a web developer in India, with expertise in both Front and back end.Also i am an enginnering student in my 2nd year.' //<span class="superscript"></span>
+    },
+    degrees:[],
+    achievments:[]
+  }
+
+  return {
+    details:about
+  }
+})
+
+portfolioApp.factory('worksDetails', function() {
+  var works = [
+    {
+      title:'SocialBook',
+      img:'/favicon.ico',
+      description:'A Social Networking Website made by me, made in PHP'
+    },
+    {
+      title:'VITacademics',
+      img:'https://vitacademics-web.herokuapp.com/favicon.ico',
+      description:'Web app to fetch Academics data for VIT student using an API'
+    }
+  ]
+
+  return {
+    details:works
+  }
+})
+
 portfolioApp.factory('submitForm', function($cookies) {
   var submit = function(formDetails) {
     console.log('Submitting...' + formDetails);

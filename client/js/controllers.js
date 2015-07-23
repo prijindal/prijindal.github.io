@@ -30,14 +30,18 @@ portfolioApp.controller('homeController', function($scope, menuHandler, homeDeta
   $scope.homeDetails = homeDetails.details
 })
 
-portfolioApp.controller('aboutController', function($scope, menuHandler) {
+portfolioApp.controller('aboutController', function($scope, menuHandler, aboutDetails) {
   $scope.loader.loaded('about')
   menuHandler.onPage('about')
+
+  $scope.about = aboutDetails.details
 })
 
-portfolioApp.controller('worksController', function($scope, menuHandler) {
+portfolioApp.controller('worksController', function($scope, menuHandler, worksDetails) {
   $scope.loader.loaded('works')
   menuHandler.onPage('works')
+
+  $scope.works = worksDetails.details
 })
 
 portfolioApp.controller('contactsController', function($scope, menuHandler, submitForm, contactDetails) {
