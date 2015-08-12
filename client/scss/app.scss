@@ -5,7 +5,7 @@ $media-query:700px;
 $main-width:1000px;
 
 $background-color:#333;
-$text-color:#fff;
+$text-color:#ddd;
 $button-colour:transparent;
 
 @import 'normalize';
@@ -66,14 +66,29 @@ $button-colour:transparent;
   }
 }
 
+@mixin links {
+    border-bottom: 1px solid #aaa;
+    &:hover {
+      border-bottom-color: #FFF;
+    }
+    &:active {
+      border-bottom-color: #aaa;
+      font-size: 1.1em;
+    }
+}
+
 #mainContainer {
     main {
         text-align: center;
-        margin:0 20px;
+        margin:0 60px;
+        max-width: $media-query;
         #content {
             font-size: 1.3em;
             margin-bottom: 50px;
         }
+    }
+    #title {
+      color:#eee;
     }
 }
 
@@ -115,14 +130,7 @@ $button-colour:transparent;
     }
   }
   a {
-    border-bottom: 1px solid #aaa;
-    &:hover {
-      border-bottom-color: #FFF;
-    }
-    &:active {
-      border-bottom-color: #aaa;
-      font-size: 1.1em;
-    }
+    @include links;
   }
 }
 
@@ -175,7 +183,18 @@ $button-colour:transparent;
     .info {
       #description {
         margin-top:10px;
+        margin-bottom: 10px;
         font-size: 1.2rem;
+      }
+      #url {
+        a {
+          @include links;
+          &:active {
+            font-size: 1.01em;
+            position: relative;
+            top:-1px;
+          }
+        }
       }
     }
   }

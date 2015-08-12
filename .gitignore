@@ -32,3 +32,5 @@ build/
 .sass-cache/
 *.sassc
 *.scssc
+
+.settings/

@@ -9,17 +9,20 @@
       </div>
       <div class="container">
         <div class="picture">
-          <img ng-src="{{work.img}}">
+          <a ng-href="{{work.url}}"><img ng-src="{{work.img}}"></a>
         </div>
         <div class="info">
           <div id="description" length="54">
             {{work.description}}
+          </div>
+          <div id="url">
+            <a ng-href="{{work.url}}">{{work.url}}</a>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div id="button">
-    <a ng-href="#/contact">Contact Me</a>
+    <a ng-href="#/contact" ng-click="loader.loadPage('contact')">Contact Me</a>
   </div>
 </main>

@@ -2,6 +2,7 @@
 
 portfolioApp.controller('globalController', function($scope, menuHandler) {
   var loading = function(element) {
+    document.scrollingElement.scrollTop = 0;
     if(!$scope.loader[element]){
       $scope.loader.loading = true;
     }

@@ -1,0 +1,18 @@
+{
+  "email":"priyanshujindal1995@gmail.com",
+  "fb":{
+    "type":"facebook",
+    "user":"prijindal",
+    "link":"http://facebook.com/prijindal"
+  },
+  "github":{
+    "type":"github",
+    "user":"prijindal",
+    "link":"http://github.com/prijindal"
+  },
+  "tweet":{
+    "type":"twitter",
+    "user":"@prijindal",
+    "link":"http://twitter.com/prijindal"
+  }
+}

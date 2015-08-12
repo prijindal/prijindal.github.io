@@ -1,0 +1,14 @@
+[
+  {
+    "title":"SocialBook",
+    "img":"/img/socialbook.png",
+    "description":"A Social Networking Website made by me, made in PHP",
+    "url":"http://socialbook.co.in"
+  },
+  {
+    "title":"VITacademics",
+    "img":"/img/vitacademics-web.png",
+    "description":"Web app to fetch Academics data for VIT student using an API",
+    "url":"http://vitacademics-web.herokuapp.com"
+  }
+]
