@@ -16,16 +16,12 @@
   <body>
     <div class="frame">
       <div id="container" ng-controller = "globalController">
-        <div id="navContainer" ng-include="'partials/menu.html'">
-        </div>
+        <div id="navContainer" ng-include="'partials/menu.html'"></div>
         <div ng-hide="loader.loading" id="mainContainer" ng-view>
 
         </div>
-        <div id="footerContainer" ng-include="'partials/footer.html'">
-        </div>
+        <div id="footerContainer" ng-include="'partials/footer.html'"></div>
       </div>
-
-
     </div>
     <!--script type="text/javascript" src="js/analytics.js"></script-->
   </body>

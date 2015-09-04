@@ -1,5 +1,4 @@
 {
-  "email":"priyanshujindal1995@gmail.com",
   "fb":{
     "type":"facebook",
     "user":"prijindal",
@@ -14,5 +13,10 @@
     "type":"twitter",
     "user":"@prijindal",
     "link":"http://twitter.com/prijindal"
+  },
+  "mail": {
+    "type":"email",
+    "user":"priyanshujindal1995@gmail.com",
+    "link":"mailto:priyanshujindal1995@gmail.com"
   }
 }
