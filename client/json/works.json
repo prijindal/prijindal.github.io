@@ -10,5 +10,11 @@
     "img":"/img/vitacademics-web.png",
     "description":"Web app to fetch Academics data for VIT student using an API",
     "url":"http://vitacademics-web.herokuapp.com"
+  },
+  {
+    "title":"readGit",
+    "img":"/img/readgit.png",
+    "description":"A simple application for using github",
+    "url":"http://prijindal.github.io/readGit/"
   }
 ]
