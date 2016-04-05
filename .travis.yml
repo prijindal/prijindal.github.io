@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+- "4.2"
+
+script: bash ./deploy.sh
+env:
+  global:
+  - GH_REF: github.com/prijindal/prijindal.github.io.git
