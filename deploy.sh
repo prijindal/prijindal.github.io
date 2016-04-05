@@ -8,6 +8,8 @@ mkdir build;
 # run our compile script, discussed above
 npm run build
 
+cp .travis.yml build/
+
 # go to the out directory and create a *new* Git repo
 cd build
 git init

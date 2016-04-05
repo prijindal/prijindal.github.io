@@ -1,7 +1,7 @@
 # blacklist
 branches:
-  except:
-    - master
+  only:
+    - development
 
 language: node_js
 node_js:
