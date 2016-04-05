@@ -6,7 +6,7 @@ rm -rf build || exit 0;
 mkdir build;
 
 # run our compile script, discussed above
-# npm install
+npm run build
 
 # go to the out directory and create a *new* Git repo
 cd build
