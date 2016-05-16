@@ -5,5 +5,5 @@ import {Component} from '@angular/core'
   template:require('./app.component.html')
 })
 export class App {
-
+  text = 'My App'
 }
