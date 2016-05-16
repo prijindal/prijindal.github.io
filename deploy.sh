@@ -1,18 +1,13 @@
 #!/bin/bash
 set -e # exit with nonzero exit code if anything fails
 
-# clear and re-create the out directory
-rm -rf build || exit 0;
-mkdir build;
-
-# run our compile script, discussed above
 npm run build
 
-cp CNAME build/
-cp .travis.yml build/
+cp CNAME dist/
+cp .travis.yml dist/
 
 # go to the out directory and create a *new* Git repo
-cd build
+cd dist
 git init
 
 # inside this git repo we'll pretend to be a new user
