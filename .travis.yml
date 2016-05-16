@@ -7,7 +7,7 @@ language: node_js
 node_js:
   - "5"
 
-script: bash ./deploy.sh
+script: npm run deploy
 env:
   global:
   - GH_REF: github.com/prijindal/prijindal.github.io.git

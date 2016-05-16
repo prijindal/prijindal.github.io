@@ -1,13 +1,4 @@
 #!/bin/bash
-set -e # exit with nonzero exit code if anything fails
-
-npm run build
-
-cp CNAME dist/
-cp .travis.yml dist/
-
-# go to the out directory and create a *new* Git repo
-cd dist
 git init
 
 # inside this git repo we'll pretend to be a new user
