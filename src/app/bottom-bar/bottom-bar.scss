@@ -4,9 +4,30 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  background-color: #cccccc;
+  background-color: #32a8d9;
   transition: all 0.2s ease-out;
   @media (min-width: 480px) {
     height: 50px;
+  }
+}
+
+nav {
+  height: 100%;
+}
+
+nav {
+  .element {
+    padding: 12px;
+    border-right: 1px solid #ffffff;
+    .text {
+      display: inline-block;
+      max-width: 0px;
+      opacity: 0;
+      transition: all 0.2s ease-out;
+    }
+    &:hover .text {
+      opacity: initial;
+      max-width: 100px;
+    }
   }
 }
