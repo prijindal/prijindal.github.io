@@ -45,3 +45,19 @@ $fabSize:56px;
     font-size: 24px;
   }
 }
+
+.message {
+  position: fixed;
+  right: 10px;
+  bottom: 90px;
+  height: 300px;
+  width: 500px;
+  opacity: 0;
+  cursor: default;
+  box-shadow: 0 0 1px rgba(76,86,103,.25),0 2px 18px rgba(31,37,50,.32);
+  transition: all 0.2s ease-out;
+  &.active {
+    opacity: 1.0;
+    bottom: 110px;
+  }
+}
