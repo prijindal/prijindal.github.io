@@ -4,10 +4,9 @@
   </h2>
   <input [(ngModel)]="text"/>
 
-  <button *ngIf="!messaging" (click)="messaging = true" class="fab">
-    <i class="fa fa-comment"></i>
-  </button>
-  <button *ngIf="messaging" (click)="messaging = false" class="fab">
-    <i class="fa fa-times"></i>
+  <button (click)="messaging = !messaging" class="fab" [class.close]="messaging">
+    <i class="fa fa-comment"
+       [class.fa-comment]="!messaging"
+       [class.fa-plus]="messaging"></i>
   </button>
 </div>
