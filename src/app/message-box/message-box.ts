@@ -6,5 +6,5 @@ import { Component } from '@angular/core'
   styles:[require('./message-box.scss')]
 })
 export class MessageBox {
-  
+
 }
