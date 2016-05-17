@@ -3,4 +3,11 @@
     Welcome To {{text}}
   </h2>
   <input [(ngModel)]="text"/>
+
+  <button *ngIf="!messaging" (click)="messaging = true" class="fab">
+    <i class="fa fa-comment"></i>
+  </button>
+  <button *ngIf="messaging" (click)="messaging = false" class="fab">
+    <i class="fa fa-times"></i>
+  </button>
 </div>

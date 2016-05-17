@@ -7,4 +7,5 @@ import {Component} from '@angular/core'
 })
 export class App {
   text = 'My App'
+  messaging:Boolean = false
 }
