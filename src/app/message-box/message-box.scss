@@ -1,0 +1,56 @@
+$fabSize:56px;
+.fab {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: #32a8d9;
+  border-radius: 50%;
+  margin: auto;
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px 3px #cccccc;
+  max-width: $fabSize;
+  min-width: $fabSize;
+  max-height: $fabSize;
+  min-height: $fabSize;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  z-index: 3;
+  &.close {
+    background: #9a9c9d;
+    border-radius: 0 100% 100%;
+    transform: rotate(45deg);
+  }
+  i.fa {
+    font-size: 24px;
+  }
+}
+
+.message {
+  position: fixed;
+  right: 10px;
+  bottom: 90px;
+  height: 300px;
+  width: 90%;
+  max-width: 500px;
+  background-color: white;
+  opacity: 0;
+  cursor: default;
+  z-index: -1;
+  box-shadow: 0 0 1px rgba(76,86,103,.25),0 2px 18px rgba(31,37,50,.32);
+  transition: all 0.2s ease-out;
+  &.active {
+    opacity: 1.0;
+    bottom: 110px;
+    z-index: 1000;
+  }
+}
+
+.message-overlay {
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}

@@ -4,13 +4,5 @@
   </h2>
   <input [(ngModel)]="text"/>
 
-  <button (click)="messaging = !messaging" class="fab" [class.close]="messaging">
-    <i class="fa fa-comment"
-       [class.fa-comment]="!messaging"
-       [class.fa-plus]="messaging"></i>
-  </button>
-
-  <div class="message" [class.active]="messaging">
-
-  </div>
+  <message-box></message-box>
 </div>
