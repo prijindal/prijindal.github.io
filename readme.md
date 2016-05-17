@@ -4,3 +4,4 @@ My portfolio
 
 ## Future
 - Use SCSS
+- Put a fab for contact info
