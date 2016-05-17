@@ -24,7 +24,7 @@ $fabSize:56px;
   margin: auto;
   border: none;
   outline: none;
-  box-shadow: 3px 3px 3px #cccccc;
+  box-shadow: 0px 0px 10px;
   max-width: $fabSize;
   min-width: $fabSize;
   max-height: $fabSize;
@@ -32,6 +32,9 @@ $fabSize:56px;
   cursor: pointer;
   transition: all 0.2s ease-out;
   z-index: 3;
+  &:hover {
+    box-shadow: 0px 0px 20px;
+  }
   &.close {
     background: #9a9c9d;
     border-radius: 0 100% 100%;
