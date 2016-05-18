@@ -10,6 +10,5 @@ import { BottomBar } from './bottom-bar/bottom-bar'
   directives:[MessageBox, BottomBar]
 })
 export class App {
-  text = 'My App'
-  messaging:Boolean = false
+  
 }

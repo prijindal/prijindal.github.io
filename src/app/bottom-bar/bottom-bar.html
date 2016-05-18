@@ -1,14 +1,8 @@
 <nav flex flex-center>
-  <div class="element" flex flex-column flex-center>
+  <div *ngFor="let button of buttons" class="element" flex flex-column flex-center>
     <span>
-      <i class="fa fa-info"></i>
-      <span class="text">About</span>
-    </span>
-  </div>
-  <div class="element" flex flex-column flex-center>
-    <span>
-      <i class="fa fa-info"></i>
-      <span class="text">About</span>
+      <i class="fa fa-{{button.icon}}"></i>
+      <span class="text">{{button.title}}</span>
     </span>
   </div>
 </nav>
