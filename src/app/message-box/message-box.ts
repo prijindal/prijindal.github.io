@@ -7,7 +7,11 @@ import { Component } from '@angular/core'
 })
 export class MessageBox {
   messaging:boolean = false
-  form = {message:''}
+  form = {
+    name:'',
+    email:'',
+    message:''
+  }
   textarearows = 3
   submitted:boolean = false
 
@@ -18,6 +22,9 @@ export class MessageBox {
 
   sendMessage(e) {
     e.preventDefault()
+    this.form.name = this.form.name.trim()
+    this.form.email = this.form.email.trim()
+    this.form.message = this.form.message.trim()
     console.log(this.form)
     this.submitted = true
   }
@@ -25,7 +32,9 @@ export class MessageBox {
   closeThis() {
     this.messaging = false
     this.submitted = false
-    this.form = {message:''}
+    this.form.name = ''
+    this.form.email = ''
+    this.form.message = ''
     this.calculateRows()
   }
 
