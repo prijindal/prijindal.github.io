@@ -45,10 +45,9 @@ $fabSize:56px;
   }
 }
 
-.message {
+.message,.submitted {
   position: absolute;
-  bottom: 60px;
-  height: 300px;
+  bottom: 80px;
   width: 100%;
   max-width: 500px;
   background-color: white;
@@ -59,8 +58,107 @@ $fabSize:56px;
   transition: all 0.2s ease-out;
   &.active {
     opacity: 1.0;
+    z-index: 1000;
+  }
+}
+
+.message {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  opacity: 0;
+  cursor: default;
+  z-index: -1;
+  box-shadow: 0 0 1px rgba(76,86,103,.25),0 2px 18px rgba(31,37,50,.32);
+  transition: all 0.2s ease-out;
+  padding: 0 0 15px;
+  &.active {
+    opacity: 1.0;
     bottom: 80px;
     z-index: 1000;
+  }
+  &.rotated {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+  }
+  .message-inner {
+    padding: 16px;
+  }
+}
+
+.submitted {
+  background: #f44336;
+  color:rgba(0,0,0,0.87);
+  transform: rotateY(-180deg);
+  &.active {
+    transform: rotateY(0);
+  }
+  > div {
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+  }
+  .text {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  .icon-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #8bc34a;
+    font-size: 56px;
+  }
+}
+
+.input-container {
+  padding:8px;
+}
+input,textarea {
+  background: 0 0;
+  border: 1px solid #d9d9d9;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #333;
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  padding: 4px 12px;
+  width: 100%;
+  transition: all 0.2s ease-out;
+}
+input {
+  height: 36px;
+}
+textarea {
+  resize: none;
+}
+
+.buttons {
+  padding:8px;
+  button {
+    text-transform: none;
+    overflow: visible;
+    color: #fff;
+    -webkit-appearance: button;
+    cursor: pointer;
+    float: right;
+    font-size: 13px;
+    outline: 0;
+    padding: 10px 30px;
+    right: 0;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+    background-color: #32a8d9;
+    &:hover,&:focus {
+      background-color: #1e94c5;
+      text-decoration: none;
+    }
   }
 }
 
