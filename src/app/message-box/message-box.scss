@@ -63,16 +63,8 @@ $fabSize:56px;
 }
 
 .message {
-  position: absolute;
   bottom: 60px;
-  width: 100%;
-  max-width: 500px;
   background-color: white;
-  opacity: 0;
-  cursor: default;
-  z-index: -1;
-  box-shadow: 0 0 1px rgba(76,86,103,.25),0 2px 18px rgba(31,37,50,.32);
-  transition: all 0.2s ease-out;
   padding: 0 0 15px;
   &.active {
     opacity: 1.0;
