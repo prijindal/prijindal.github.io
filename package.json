@@ -33,7 +33,7 @@
     "build:prod": "webpack --config config/webpack.prod.js  --progress --profile --colors --display-error-details --display-cached --bail",
     "github-deploy": "npm run github-deploy:dev",
     "github-deploy:dev": "webpack --config config/webpack.github-deploy.js --progress --profile --colors --display-error-details --display-cached --github-dev",
-    "github-deploy:prod": "webpack --config config/webpack.github-deploy.js --progress --profile --colors --display-error-details --display-cached --github-prod",
+    "github-deploy:prod": "webpack --config config/webpack.github-deploy.js --progress --profile --colors --display-error-details --display-cached --github-prod --verbose",
     "server": "npm run server:dev",
     "server:dev": "webpack-dev-server --config config/webpack.dev.js --inline --progress --profile --colors --watch --display-error-details --display-cached --content-base src/",
     "server:dev:hmr": "npm run server:dev -- --hot",
