@@ -5,7 +5,7 @@ branches:
 language: node_js
 node_js:
   - "6"
-# 
+#
 # cache:
 #   directories:
 #     - node_modules
@@ -16,4 +16,4 @@ notifications:
 
 script:
   - echo "Test Completed"
-  - npm run github-deploy:prod
+  - npm run github-deploy:prod --verbose
