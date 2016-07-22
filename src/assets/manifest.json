@@ -46,7 +46,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "background_color":"#eaeaea",
-  "theme_color":"#00bcd4",
+  "theme_color":"#29b6f6",
   "related_applications": [{
     "platform": "web",
     "url":"https://prijindal.github.io"

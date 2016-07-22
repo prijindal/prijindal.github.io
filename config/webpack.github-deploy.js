@@ -62,7 +62,8 @@ module.exports = webpackMerge(webpackConfig, {
         const options = {
           logger: logger,
           remote: GIT_REMOTE_NAME,
-          message: COMMIT_MESSAGE
+          message: COMMIT_MESSAGE,
+          branch:'master'
         };
 
         ghpages.publish(webpackConfig.output.path, options, function(err) {
