@@ -32,18 +32,10 @@ module.exports = {
     ],
     additional:[
       'assets/service-worker.js',
-      'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
-      'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css',
-      'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css',
-      'https://code.jquery.com/jquery-2.2.4.min.js',
-      'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'
+      'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'
     ],
     externals:[
-      'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
-      'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css',
-      'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css',
-      'https://code.jquery.com/jquery-2.2.4.min.js',
-      'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'
+      'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'
     ],
     optional:optional
   }
