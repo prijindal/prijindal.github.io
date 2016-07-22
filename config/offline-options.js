@@ -25,17 +25,16 @@ module.exports = {
       'vendor.*.js',
       'main.*.js',
       '/',
-      'assets/img/angular-logo.png',
       'assets/css/loading.css',
-      'assets/css/styles.css',
-      'assets/css/forms.css'
+      'assets/css/styles.css'
     ],
     additional:[
+      'assets/img/*.png',
       'assets/service-worker.js',
-      'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'
+      'https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css'
     ],
     externals:[
-      'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'
+      'https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css'
     ],
     optional:optional
   }
