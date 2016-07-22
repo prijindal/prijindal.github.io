@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/prijindal/prijindal.github.io?token=JyD4yGXkcVRKU6FK56zg&branch=master)](https://travis-ci.com/prijindal/prijindal.github.io)
+[![Build Status](https://travis-ci.org/prijindal/prijindal.github.io.svg?branch=development)](https://travis-ci.org/prijindal/prijindal.github.io)
 
 # Priyanshu Jindal Portfolio
 
