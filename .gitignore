@@ -1,6 +1,9 @@
+# @AngularClass
+
 # Logs
 logs
 *.log
+*.log.*
 
 # Runtime data
 pids
@@ -16,21 +19,44 @@ coverage
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
-# node-waf configuration
-.lock-wscript
-
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
-# Dependency directory
-# https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
-node_modules/
-bower_components/
+# Users Environment Variables
+.lock-wscript
 
-# Gulp + SASS
-build/
-.sass-cache/
-*.sassc
-*.scssc
+# OS generated files #
+.DS_Store
+ehthumbs.db
+Thumbs.db
 
-.settings/
+# Node Files #
+/node_modules
+/bower_components
+npm-debug.log
+
+# Coverage #
+/coverage/
+
+# Typing #
+/src/typings/tsd/
+/typings/
+/tsd_typings/
+
+# Dist #
+/dist
+/public/__build__/
+/src/*/__build__/
+/__build__/**
+/public/dist/
+/src/*/dist/
+/dist/**
+.webpack.json
+
+# Doc #
+/doc/
+
+# IDE #
+.idea/
+*.swp
+.settings
