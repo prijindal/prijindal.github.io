@@ -1,0 +1,22 @@
+<div page flex flex-row flex-around>
+  <div preview-container [class]="previewPlatform">
+    <div preview-buttons>
+      <button *ngFor="let platform of platforms"
+              (click)="previewPlatform=platform.name"
+              [class.active]="previewPlatform==platform.name">
+              {{platform.title}}
+      </button>
+    </div>
+    <div preview>
+      <!-- Just add a GIF -->
+      GIF
+    </div>
+  </div>
+  <div>
+    <h2>A la kart</h2>
+      <h2>A la kart</h2>
+        <h2>A la kart</h2>
+          <h2>A la kart</h2>
+            <h2>A la kart</h2>
+  </div>
+</div>

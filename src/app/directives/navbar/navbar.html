@@ -1,0 +1,8 @@
+<nav flex flex-center>
+  <div [routerLink]="[button.route]" *ngFor="let button of buttons" class="element" flex flex-column flex-center>
+    <span>
+      <i class="fa fa-{{button.icon}}"></i>
+      <span class="text">{{button.title}}</span>
+    </span>
+  </div>
+</nav>

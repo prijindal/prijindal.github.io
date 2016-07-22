@@ -1,13 +1,19 @@
-# blacklist
 branches:
   only:
-    - development
+    - angular2
 
 language: node_js
 node_js:
-  - "5"
+  - "6"
 
-script: npm run deploy
-env:
-  global:
-  - GH_REF: github.com/prijindal/prijindal.github.io.git
+cache:
+  directories:
+    - node_modules
+    - typings
+
+notifications:
+  # slack:
+
+script:
+  - echo "Test Completed"
+  - npm run github-deploy:prod

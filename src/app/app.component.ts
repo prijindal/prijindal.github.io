@@ -1,33 +1,20 @@
-import {Component, OnInit} from '@angular/core'
-import {Routes, Router, ROUTER_DIRECTIVES} from '@angular/router'
+import { Component,ViewEncapsulation } from '@angular/core';
+import { ROUTER_DIRECTIVES } from '@angular/router'
 
-import { MessageBox } from './message-box/message-box'
-import { BottomBar } from './bottom-bar/bottom-bar'
+import { NavBar } from './directives/navbar/index'
+import { MessageBox } from './directives/message-box/index'
 
-import { WorksPageComponent } from './works-page/works-page'
-
-@Routes([
-  {
-    path:'/works',
-    component:WorksPageComponent
-  }
-])
 @Component({
-  selector:'my-app',
-  template:require('./app.component.html'),
-  styles:[require('./app.component.scss')],
-  directives:[
-    MessageBox,
-    BottomBar,
-    ROUTER_DIRECTIVES
-  ]
+  selector: 'my-app',
+  templateUrl:'./app.component.html',
+  styleUrls: ['./app.component.scss'],
+  directives: [
+    ROUTER_DIRECTIVES,
+    NavBar,
+    MessageBox
+  ],
+  encapsulation:ViewEncapsulation.None
 })
-export class App implements OnInit {
-  constructor(
-    private route: Router
-  ) {}
+export class AppComponent {
 
-  ngOnInit() {
-    this.route.navigate(['/works'])
-  }
 }
