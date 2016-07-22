@@ -16,12 +16,8 @@ const COMMIT_MESSAGE = 'Updates';
 const GH_REPO_NAME = ghDeploy.getRepoName(GIT_REMOTE_NAME);
 
 const METADATA = webpackMerge(webpackConfig.metadata, {
-  /**
-   * Prefixing the REPO name to the baseUrl for router support.
-   * This also means all resource URIs (CSS/Images/JS) will have this prefix added by the browser
-   * unless they are absolute (start with '/'). We will handle it via `output.publicPath`
-   */
-  baseUrl: '/' + GH_REPO_NAME + '/' + ghDeploy.safeUrl(webpackConfig.metadata.baseUrl)
+
+  
 });
 
 module.exports = webpackMerge(webpackConfig, {
