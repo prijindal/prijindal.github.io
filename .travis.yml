@@ -1,6 +1,6 @@
 branches:
   only:
-    - angular2
+    - development
 
 language: node_js
 node_js:
