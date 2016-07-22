@@ -1,22 +1,28 @@
-<div page flex flex-row flex-around>
-  <div preview-container [class]="previewPlatform">
-    <div preview-buttons>
-      <button *ngFor="let platform of platforms"
-              (click)="previewPlatform=platform.name"
-              [class.active]="previewPlatform==platform.name">
-              {{platform.title}}
-      </button>
+<main>
+  <div id="works">
+    <div class="title">
+      <h1>My Works</h1>
     </div>
-    <div preview>
-      <!-- Just add a GIF -->
-      GIF
+    <div *ngFor="let work of works" class="work">
+      <div class="title">
+        <h2>{{work.title}}</h2>
+      </div>
+      <div class="container">
+        <div class="picture">
+          <a [href]="work.url"><img [src]="work.img"></a>
+        </div>
+        <div class="info">
+          <div id="description" length="54">
+            {{work.description}}
+          </div>
+          <div id="url">
+            <a target="_blank" [href]="work.url">{{work.url}}</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div>
-    <h2>A la kart</h2>
-      <h2>A la kart</h2>
-        <h2>A la kart</h2>
-          <h2>A la kart</h2>
-            <h2>A la kart</h2>
+  <div id="button">
+    <a [routerLink]="['/contact']">Contact Me</a>
   </div>
-</div>
+</main>

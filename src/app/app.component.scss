@@ -1,21 +1,8 @@
-@import "styles/layout";
+@import "styles/app";
 @import "styles/forms";
 
-main {
-  padding: 1em;
-  font-family: 'Montserrat Alternates',Arial, Helvetica, sans-serif;
-  text-align: center;
-  display: block;
-}
-
-.container {
+#container {
   animation: zoom-animation 0.5s ease-in;
-  width:100%;
-  height: 100%;
-  position: fixed;
-  top:0;
-  left: 0;
-  background: #ffffff;
 }
 @keyframes zoom-animation {
   0% {

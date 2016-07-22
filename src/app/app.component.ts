@@ -2,7 +2,7 @@ import { Component,ViewEncapsulation } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router'
 
 import { NavBar } from './directives/navbar/index'
-import { MessageBox } from './directives/message-box/index'
+import { Footer } from './directives/footer/index'
 
 @Component({
   selector: 'my-app',
@@ -11,7 +11,7 @@ import { MessageBox } from './directives/message-box/index'
   directives: [
     ROUTER_DIRECTIVES,
     NavBar,
-    MessageBox
+    Footer
   ],
   encapsulation:ViewEncapsulation.None
 })
