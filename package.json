@@ -54,7 +54,7 @@
     "gh-build":"npm run build:prod && cd dist && rm *.map && touch .nojekyll && ln -s index.html 404.html",
     "postgh-build":"cp -r dist gh && cd gh/dist && git config user.name '${GH_NAME}' && git config user.email '${GH_EMAIL}'",
     "pregh-deploy":"npm run gh-build",
-    "gh-deploy":"git add . && git commit -am 'Build Completed' && git push origin master",
+    "gh-deploy":"cd gh/dist && git add . && git commit -am 'Build Completed' && git push origin master",
     "preversion": "npm test",
     "version": "npm run build",
     "postversion": "git push && git push --tags"
