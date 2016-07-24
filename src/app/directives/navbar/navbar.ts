@@ -10,5 +10,5 @@ import { ROUTER_DIRECTIVES,Router } from '@angular/router'
 export class NavBar {
   constructor(
     private router:Router
-  ) {console.dir(router)}
+  ) {}
 }
