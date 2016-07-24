@@ -50,7 +50,7 @@
     "start": "npm run server:dev",
     "start:hmr": "npm run server:dev:hmr",
     "postinstall": "npm run typings-install",
-    "pregh-build":"mkdir gh && cd gh && git clone -b master --single-branch https://${GH_TOKEN}@${GH_REF} master",
+    "pregh-build":"rimraf gh && mkdir gh && cd gh && git clone -b master --single-branch https://${GH_TOKEN}@${GH_REF} master",
     "gh-build":"npm run build:prod && cd dist && rm *.map && touch .nojekyll && ln -s index.html 404.html",
     "postgh-build":"cp dist gh/master",
     "gh-deploy":"npm run gh-build && cd gh/master git add . && git commit -am 'Build Completed' && git push origin master",

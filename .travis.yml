@@ -5,12 +5,17 @@ branches:
 language: node_js
 node_js:
   - "6"
-#
-# cache:
-#   directories:
-#     - node_modules
-#     - typings
 
+cache:
+  directories:
+    - node_modules
+    - typings
+
+
+env:
+  global:
+  - GH_REF: github.com/prijindal/prijindal.github.io.git
+  
 notifications:
   # slack:
 
