@@ -16,4 +16,4 @@ notifications:
 
 script:
   - echo "Test Completed"
-  - npm run github-deploy:prod --verbose
+  - npm run gh-deploy
