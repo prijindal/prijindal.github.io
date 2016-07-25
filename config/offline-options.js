@@ -1,11 +1,3 @@
-var headTags = require('./head-config.common')
-
-var optional = []
-
-headTags.link.forEach((link) => {
-  optional.push(link.href)
-})
-
 module.exports = {
   AppCache:{
     caches:['main','additional'],
@@ -29,13 +21,14 @@ module.exports = {
       'assets/css/styles.css'
     ],
     additional:[
-      'assets/img/*.png',
-      'assets/service-worker.js',
       'https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css'
     ],
     externals:[
       'https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css'
     ],
-    optional:optional
+    optional:[
+      'assets/img/*.png',
+      'assets/service-worker.js'
+    ]
   }
 }
