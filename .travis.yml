@@ -12,7 +12,7 @@ cache:
 
 env:
   global:
-  - GH_REF: github.com/prijindal/prijindal.github.io.git
+  - GH_REF: git@github:prijindal/prijindal.github.io.git
   - GH_EMAIL: priyanshujindal1995@gmail.com
   - GH_NAME: Travis CI
 
