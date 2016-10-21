@@ -5,5 +5,4 @@ git add . &&
 git config user.email $GH_EMAIL &&
 git config user.name $GH_NAME && 
 git commit -am 'Init commit' &&
-git remote add origin $GH_REF &&
-git push origin master --force
+git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master > /dev/null 2>&1
