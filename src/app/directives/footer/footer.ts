@@ -1,11 +1,9 @@
 import { Component } from '@angular/core'
-import { ROUTER_DIRECTIVES,Router } from '@angular/router'
 
 @Component({
   selector:'footer',
   templateUrl:'./footer.html',
-  styleUrls:['./footer.scss'],
-  directives:[ROUTER_DIRECTIVES]
+  styleUrls:['./footer.scss']
 })
 export class Footer {
   constructor() {

@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+html,body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color:#ddd;
+  min-width:223px;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+@import "./app/styles/app";
+@import "./app/styles/forms";
+
+#container {
+  animation: zoom-animation 0.5s ease-in;
+}
+@keyframes zoom-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
