@@ -21,4 +21,4 @@ notifications:
 
 script:
   - echo "Test Completed"
-  - npm run gh-deploy
+  - bash ./deploy.sh
