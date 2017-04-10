@@ -1,10 +1,10 @@
-import { PriyanshuJindalPage } from './app.po';
+import { AboutPage } from './app.po';
 
-describe('priyanshu-jindal App', function() {
-  let page: PriyanshuJindalPage;
+describe('about App', () => {
+  let page: AboutPage;
 
   beforeEach(() => {
-    page = new PriyanshuJindalPage();
+    page = new AboutPage();
   });
 
   it('should display message saying app works', () => {
