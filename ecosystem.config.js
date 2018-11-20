@@ -29,7 +29,7 @@ module.exports = {
       repo: 'ssh://git@github.com/prijindal/prijindal.github.io.git',
       path: '/home/ubuntu/prijindal',
       'post-deploy':
-        'yarn install && npm run build:ssr && pm2 reload ecosystem.config.js --env production',
+        'pm2 reload ecosystem.config.js --env production',
     },
   },
 };

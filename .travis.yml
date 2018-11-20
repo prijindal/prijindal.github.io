@@ -24,9 +24,8 @@ notifications:
   # slack:
 
 before_install:
-  - mkdir -p ~/Downloads/
-  - openssl aes-256-cbc -K $encrypted_efd26535d89e_key -iv $encrypted_efd26535d89e_iv -in id_rsa.enc -out ~/Downloads/newsapp.pem -d
-  - chmod 600 ~/Downloads/newsapp.pem
+  - openssl aes-256-cbc -K $encrypted_efd26535d89e_key -iv $encrypted_efd26535d89e_iv -in id_rsa.enc -out id_rsa -d
+  - chmod 600 id_rsa
 
 install:
   - yarn
@@ -34,9 +33,9 @@ script:
   - yarn lint
   - yarn test --watch=false --browsers ChromeHeadless
 after_success:
-  - ng build --prod --aot
-  - npm install -g pm2
-  - pm2 deploy ecosystem.config.js production
+  - npm run build:ssr
+  - scp -i id_rsa dist ubuntu@13.126.205.26:~/prijindal/source/dist
+  - ssh -i id_rsa -o "StrictHostKeyChecking=no" 13.126.205.26 "cd prijindal/source && pm2 reload ecosystem.config.js --env production"
 deploy:
   provider: pages
   local-dir: dist/browser
