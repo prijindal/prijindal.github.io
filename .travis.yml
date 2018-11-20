@@ -30,6 +30,10 @@ script:
   - yarn test --watch=false --browsers ChromeHeadless
 after_success:
   - ng build --prod --aot
+  - npm install -g pm2
+  - mkdir -p ~/Downloads/
+  - echo "$SSH_PRIVATE_KEY" >> ~/Downloads/newsapp.pem
+  - pm2 deploy ecosystem.config.js production
 deploy:
   provider: pages
   local-dir: dist/browser
