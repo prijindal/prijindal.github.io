@@ -360,14 +360,14 @@
   dependencies:
     "@types/jasmine" "*"
 
+"@types/node@^10.12.9":
+  version "10.12.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.9.tgz#a07bfa74331471e1dc22a47eb72026843f7b95c8"
+  integrity sha512-eajkMXG812/w3w4a1OcBlaTwsFPO5F7fJ/amy+tieQxEMWBlbV1JGSjkFM+zkHNf81Cad+dfIRA+IBkvmvdAeA==
+
 "@types/node@^6.0.46":
   version "6.0.68"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.68.tgz#0c43b6b8b9445feb86a0fbd3457e3f4bc591e66d"
-
-"@types/node@~8.9.4":
-  version "8.9.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.9.5.tgz#162b864bc70be077e6db212b322754917929e976"
-  integrity sha512-jRHfWsvyMtXdbhnz5CVHxaBgnV6duZnPlQuRSo/dm/GnmikNcmZhxIES4E9OZjUmQ8C+HCl4KJux+cXN/ErGDQ==
 
 "@types/q@^0.0.32":
   version "0.0.32"

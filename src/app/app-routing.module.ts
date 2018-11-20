@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { Home } from './home/index'
-import { About } from './about/index'
-import { Works } from './works/index'
-import { Contact } from './contact/index'
-import { FourOFour } from './404/index'
+import { Home } from './home/index';
+import { About } from './about/index';
+import { Works } from './works/index';
+import { Contact } from './contact/index';
+import { FourOFour } from './404/index';
 
 const routes: Routes = [
   {
@@ -13,15 +13,15 @@ const routes: Routes = [
     component: Home
   },
   {
-    path:'about',
+    path: 'about',
     component: About
   },
   {
-    path:'works',
+    path: 'works',
     component: Works
   },
   {
-    path:'contact',
+    path: 'contact',
     component: Contact
   },
   {
