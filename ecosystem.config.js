@@ -24,11 +24,11 @@ module.exports = {
       key: '~/Downloads/newsapp.pem',
       user: 'ubuntu',
       host: '13.126.205.26',
-      ref: 'origin/master',
-      repo: 'ssh://git@gitlab.com/prijindal/prijindal.github.io.git',
+      ref: 'origin/development',
+      repo: 'ssh://git@github.com/prijindal/prijindal.github.io.git',
       path: '/home/ubuntu/prijindal',
       'post-deploy':
-        'yarn install --production && pm2 reload ecosystem.config.js --env production',
+        'yarn install --production && npm run build:ssr && pm2 reload ecosystem.config.js --env production',
     },
   },
 };
