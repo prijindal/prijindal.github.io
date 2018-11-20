@@ -21,6 +21,7 @@ notifications:
 
 script:
   - yarn lint
+  # - yarn test --watch=false --browsers PhantomJS
 after_success:
   - ng build --prod --aot
 deploy:
