@@ -1,31 +1,31 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { Home } from './home/index';
-import { About } from './about/index';
-import { Works } from './works/index';
-import { Contact } from './contact/index';
-import { FourOFour } from './404/index';
+import { HomeComponent } from './home/index';
+import { AboutComponent } from './about/index';
+import { WorksComponent } from './works/index';
+import { ContactComponent } from './contact/index';
+import { FourOFourComponent } from './404/index';
 
 const routes: Routes = [
   {
     path: '',
-    component: Home
+    component: HomeComponent
   },
   {
     path: 'about',
-    component: About
+    component: AboutComponent
   },
   {
     path: 'works',
-    component: Works
+    component: WorksComponent
   },
   {
     path: 'contact',
-    component: Contact
+    component: ContactComponent
   },
   {
-    path: '**', component: FourOFour
+    path: '**', component: FourOFourComponent
   }
 ];
 

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl:'./contact.html',
-  styleUrls:['./contact.scss']
+  templateUrl: './contact.html',
+  styleUrls: ['./contact.scss']
 })
-export class Contact {
-  myDetails = require('./contact.json')
+export class ContactComponent {
+  myDetails = require('./contact.json');
 }

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl:'./home.html',
-  styleUrls:['./home.scss']
+  templateUrl: './home.html',
+  styleUrls: ['./home.scss']
 })
-export class Home {
-  homeDetails = require('./home.json')
+export class HomeComponent {
+  homeDetails = require('./home.json');
 }

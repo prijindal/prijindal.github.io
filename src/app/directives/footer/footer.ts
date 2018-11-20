@@ -1,20 +1,22 @@
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
 
 @Component({
-  selector:'footer',
-  templateUrl:'./footer.html',
-  styleUrls:['./footer.scss']
+  selector: 'app-footer',
+  templateUrl: './footer.html',
+  styleUrls: ['./footer.scss']
 })
-export class Footer {
+export class FooterComponent {
   constructor() {
-    var contact = require('../../contact/contact.json')
-    for(var c in contact) {
-      this.footerContact.push({
-        type:c,
-        user:contact[c].user,
-        link:contact[c].link
-      })
+    const contact = require('../../contact/contact.json');
+    for (const c in contact) {
+      if (contact.hasOwnProperty(c)) {
+        this.footerContact.push({
+          type: c,
+          user: contact[c].user,
+          link: contact[c].link
+        });
+      }
     }
   }
-  footerContact = []
+  footerContact = [];
 }

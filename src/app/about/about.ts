@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   templateUrl: './about.html',
   styleUrls: ['./about.scss']
 })
-export class About {
+export class AboutComponent {
   about: any = require('./about.json');
 }

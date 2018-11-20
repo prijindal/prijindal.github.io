@@ -20,5 +20,13 @@ notifications:
   # slack:
 
 script:
-  - echo "Test Completed"
-  - bash ./deploy.sh
+  - yarn lint
+deploy:
+  provider: pages
+  local-dir: dist
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  target-branch: master
+  on:
+    branch: development
