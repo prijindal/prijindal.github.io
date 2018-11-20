@@ -8,6 +8,11 @@ import { enableProdMode } from '@angular/core';
 import * as express from 'express';
 import { join } from 'path';
 import { readFileSync } from 'fs';
+import * as expressRedisCache from 'express-redis-cache';
+
+const cache = expressRedisCache({
+  expire: 60 * 60 * 24 // One day
+});
 
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
@@ -44,10 +49,10 @@ app.set('view engine', 'html');
 app.set('views', join(DIST_FOLDER, 'browser'));
 
 // Server static files from /browser
-app.get('*.*', express.static(join(DIST_FOLDER, 'browser')));
+app.get('*.*', cache.route(), express.static(join(DIST_FOLDER, 'browser')));
 
 // All regular routes use the Universal engine
-app.get('*', (req, res) => {
+app.get('*', cache.route(), (req, res) => {
   res.render(join(DIST_FOLDER, 'browser', 'index.html'), { req });
 });
 
