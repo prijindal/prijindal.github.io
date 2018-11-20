@@ -26,7 +26,7 @@ import { FourOFourComponent } from './404/index';
     FourOFourComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'priyanshu-jindal'}),
     AppRoutingModule
   ],
   providers: [],

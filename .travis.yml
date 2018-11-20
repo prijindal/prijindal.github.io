@@ -32,7 +32,7 @@ after_success:
   - ng build --prod --aot
 deploy:
   provider: pages
-  local-dir: dist
+  local-dir: dist/browser
   skip-cleanup: true
   github-token: $GH_TOKEN
   keep-history: true
