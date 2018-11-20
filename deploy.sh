@@ -1,4 +1,4 @@
-ng build -prod --aot && 
+ng build --prod --aot && 
 cd dist && 
 git init && 
 git add . && 
