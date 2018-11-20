@@ -34,7 +34,7 @@ script:
   - yarn test --watch=false --browsers ChromeHeadless
 after_success:
   - npm run build:ssr
-  - scp -i id_rsa -r dist ubuntu@13.126.205.26:~/prijindal/source/ 
+  - scp -i id_rsa -o "StrictHostKeyChecking=no" -r dist ubuntu@13.126.205.26:~/prijindal/source/ 
   - ssh -i id_rsa -o "StrictHostKeyChecking=no" 13.126.205.26 "cd prijindal/source && pm2 reload ecosystem.config.js --env production"
 deploy:
   provider: pages

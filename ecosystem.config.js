@@ -17,19 +17,5 @@ module.exports = {
         autorestart: true,
       },
     },
-  ],
-
-  deploy: {
-    production: {
-      key: '~/Downloads/newsapp.pem',
-      user: 'ubuntu',
-      host: '13.126.205.26',
-      ref: 'origin/development',
-      ssh_options: "StrictHostKeyChecking=no",
-      repo: 'ssh://git@github.com/prijindal/prijindal.github.io.git',
-      path: '/home/ubuntu/prijindal',
-      'post-deploy':
-        'pm2 reload ecosystem.config.js --env production',
-    },
-  },
+  ]
 };
