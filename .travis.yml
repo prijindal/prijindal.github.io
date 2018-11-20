@@ -10,6 +10,7 @@ addons:
   chrome: stable
 
 cache:
+  yarn: true
   directories:
     - node_modules
 
@@ -22,6 +23,8 @@ env:
 notifications:
   # slack:
 
+install:
+  - yarn
 script:
   - yarn lint
   - yarn test --watch=false --browsers ChromeHeadless

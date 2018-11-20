@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-    <div ng-show="about.degrees.length" id="degrees">
+    <div *ngIf="about.degrees.length > 0" id="degrees">
       <div class="title">
         <h2>Degrees</h2>
       </div>
@@ -28,8 +28,8 @@
         </div>
       </div>
     </div>
-    <div id="achievments">
-      <div *ngIf="about.achievments.length > 0" class="title">
+    <div *ngIf="about.achievments.length > 0" id="achievments">
+      <div class="title">
         <h2>Achievments</h2>
       </div>
       <div *ngFor="let achievment of about.achievments" class="container">
