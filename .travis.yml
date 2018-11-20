@@ -21,6 +21,8 @@ notifications:
 
 script:
   - yarn lint
+after_success:
+  - ng build --prod --aot
 deploy:
   provider: pages
   local-dir: dist
