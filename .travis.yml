@@ -48,5 +48,6 @@ deploy:
       
   - provider: firebase
     token: $FIREBASE_TOKEN
+    skip-cleanup: true
     on:
       branch: development
