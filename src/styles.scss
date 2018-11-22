@@ -13,10 +13,12 @@ html,body {
 
 @import "./app/styles/app";
 @import "./app/styles/forms";
+@import "./app/styles/navbar";
+@import "./app/styles/footer";
 
-#container {
+/*#container {
   animation: zoom-animation 0.5s ease-in;
-}
+}*/
 @keyframes zoom-animation {
   0% {
     opacity: 0;

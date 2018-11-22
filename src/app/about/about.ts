@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl: './about.html',
-  styleUrls: ['./about.scss']
+  templateUrl: './about.html'
 })
 export class AboutComponent {
   about: any = require('./about.json');
