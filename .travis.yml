@@ -45,3 +45,6 @@ deploy:
   target-branch: master
   on:
     branch: development
+deploy:
+  provider: firebase
+  token: $FIREBASE_TOKEN
