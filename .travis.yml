@@ -37,14 +37,16 @@ after_success:
   - scp -i id_rsa -o "StrictHostKeyChecking=no" -r dist ubuntu@13.126.205.26:~/prijindal/source/ 
   - ssh -i id_rsa -o "StrictHostKeyChecking=no" 13.126.205.26 "cd prijindal/source && pm2 reload ecosystem.config.js --env production"
 deploy:
-  provider: pages
-  local-dir: dist/browser
-  skip-cleanup: true
-  github-token: $GH_TOKEN
-  keep-history: true
-  target-branch: master
-  on:
-    branch: development
-deploy:
-  provider: firebase
-  token: $FIREBASE_TOKEN
+  - provider: pages
+    local-dir: dist/browser
+    skip-cleanup: true
+    github-token: $GH_TOKEN
+    keep-history: true
+    target-branch: master
+    on:
+      branch: development
+      
+  - provider: firebase
+    token: $FIREBASE_TOKEN
+    on:
+      branch: development
