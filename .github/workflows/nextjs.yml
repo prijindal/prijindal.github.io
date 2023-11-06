@@ -53,6 +53,8 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+      - run: npm run lint
+      - run: npm run prettier
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
