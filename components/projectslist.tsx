@@ -7,7 +7,7 @@ export function ProjectsList() {
   const tags = uniq(projects.flatMap((a) => a.tags, []));
 
   return (
-    <div className="mx-auto flex max-w-4xl flex-row py-24">
+    <div className="mx-auto flex max-w-7xl flex-row py-24">
       <div className="flex flex-col px-4">
         <div className="text-lg">Filters</div>
         <div>
@@ -18,11 +18,11 @@ export function ProjectsList() {
           ))}
         </div>
       </div>
-      <div className="flex flex-row items-center justify-between px-4">
+      <div className="flex max-h-[32rem] flex-row flex-wrap items-center justify-start overflow-y-auto px-4">
         {projects.map((project) => (
           <Link
             key={project.id}
-            className="card bg-base-100 mx-8 max-h-80 w-80 shadow-xl"
+            className="card bg-base-100 m-8 max-h-72 w-64 shadow-xl"
             href={`/projects/${project.id}`}
           >
             <figure
@@ -32,8 +32,8 @@ export function ProjectsList() {
                 className="h-full w-full object-cover object-top"
                 src={project.images[0]}
                 alt={`Image for ${project.id}`}
-                width={320}
-                height={320}
+                width={256}
+                height={256}
               />
             </figure>
             <div className="card-body">

@@ -48,8 +48,8 @@ export function ProjectModal({ project }: { project: Project }) {
               className="carousel-item relative w-full"
             >
               <Image
-                width={500}
-                height={500}
+                width={400}
+                height={400}
                 src={image}
                 alt={`Image ${i} for ${project.id}`}
                 className="w-full object-cover object-top"

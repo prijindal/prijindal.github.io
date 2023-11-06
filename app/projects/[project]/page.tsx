@@ -16,7 +16,7 @@ export default function ProjectPage({
 
   return (
     <>
-      <ProjectsList projectId={params.project} />
+      <ProjectsList />
       {projectId && project && <ProjectModal project={project} />}
     </>
   );
