@@ -13,6 +13,14 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  // {
+  //   id: "f1_game_race_manager",
+  //   name: "F1 Race Manager",
+  //   description: "A desktop app to create overlays for F1 23 game",
+  //   images: [],
+  //   tags: ["electron", "f1"],
+  //   links: {},
+  // },
   {
     id: "f1_results",
     name: "F1 Results",
@@ -60,6 +68,17 @@ export const projects: Project[] = [
         "https://play.google.com/store/apps/details?id=com.prijindal.habbit_tracker",
       builds:
         "https://nightly.link/prijindal/habbit_tracker/workflows/flutter/main",
+    },
+  },
+  {
+    id: "betro",
+    name: "Betro",
+    description: "A social media app which is end to end encrypted by default",
+    images: ["/projects/betro-1.jpg", "/projects/betro-2.jpg"],
+    tags: ["flutter", "react", "nodejs", "open_source"],
+    links: {
+      github: "https://github.com/prijindal/betro",
+      builds: "https://nightly.link/prijindal/betro/workflows/flutter/main",
     },
   },
   {
