@@ -44,4 +44,22 @@ export const projects: Project[] = [
         "https://nightly.link/prijindal/fastter-todo/workflows/flutter/main",
     },
   },
+  {
+    id: "habbit_tracker",
+    name: "Habbit Tracker",
+    description: "An app to track your daily habits and analyze them",
+    images: [
+      "/projects/habbit_tracker_1.jpg",
+      "/projects/habbit_tracker_2.jpg",
+    ],
+    tags: ["flutter", "productivity"],
+    links: {
+      github: "https://github.com/prijindal/habbit_tracker",
+      website: "https://habbit-tracker-prijindal.web.app/",
+      android:
+        "https://play.google.com/store/apps/details?id=com.prijindal.habbit_tracker",
+      builds:
+        "https://nightly.link/prijindal/habbit_tracker/workflows/flutter/main",
+    },
+  },
 ];
