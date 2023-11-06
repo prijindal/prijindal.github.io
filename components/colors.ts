@@ -4,4 +4,5 @@ export const ColorGradients = {
   containers: `bg-slate-600`,
   link: `bg-slate-700`,
   active: `bg-slate-800`,
+  translucent: `bg-slate-900/30`,
 };
