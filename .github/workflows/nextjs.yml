@@ -53,8 +53,6 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - run: npm run lint
-      - run: npm run prettier
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
@@ -75,6 +73,10 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Linting
+        run: ${{ steps.detect-package-manager.outputs.manager }} run lint
+      - name: Prettier check
+        run: ${{ steps.detect-package-manager.outputs.manager }} run prettier
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
