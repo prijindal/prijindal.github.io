@@ -42,6 +42,14 @@ export function ProjectModal({ project }: { project: Project }) {
         <div className="text-xl">{project.name}</div>
         <div className="text-lg">{project.description}</div>
 
+        <div className="justify-end">
+          {project.tags.map((tag) => (
+            <div key={tag} className="badge badge-outline mx-2">
+              {tag}
+            </div>
+          ))}
+        </div>
+
         <Carousel images={project.images} />
 
         <div className="flex flex-row justify-start">
@@ -66,7 +74,7 @@ export function ProjectModal({ project }: { project: Project }) {
                 </Link>
               );
             }
-            return <></>;
+            return <span key={linkType}></span>;
           })}
         </div>
       </div>
