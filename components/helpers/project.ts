@@ -15,7 +15,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "f1_results",
-    name: "F1 Results No Spoiler",
+    name: "F1 Results",
     description:
       "An app which allows users to follow along with previous seasons of f1 without looking at any spoilers",
     images: ["/projects/f1_results_1.jpg", "/projects/f1_results_2.jpg"],

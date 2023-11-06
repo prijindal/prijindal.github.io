@@ -1,10 +1,47 @@
-import { uniq } from "lodash";
+"use client";
+import { intersection, isEmpty, uniq } from "lodash";
 import Image from "next/image";
 import Link from "next/link";
-import { projects } from "./helpers/project";
+import { useSearchParams } from "next/navigation";
+import { useCallback, useMemo } from "react";
+import { Project, projects } from "./helpers/project";
+
+const tags = uniq(projects.flatMap((a) => a.tags, []));
+
+const TAGS_SEARCH_PARAM = "tags";
 
 export function ProjectsList() {
-  const tags = uniq(projects.flatMap((a) => a.tags, []));
+  const searchParams = useSearchParams();
+
+  const existingActiveTagsStr = searchParams.get(TAGS_SEARCH_PARAM);
+
+  const existingTags = existingActiveTagsStr?.split(",") || [];
+
+  const activeTags = existingTags.filter((a) => !isEmpty(a));
+
+  const filteredProjects: Project[] = useMemo(() => {
+    if (activeTags.length === 0) {
+      return projects;
+    }
+    return projects.filter((project) => {
+      return intersection(project.tags, activeTags).length > 0;
+    });
+  }, [activeTags]);
+
+  const getTagLink = useCallback(
+    (tag: string) => {
+      const newTags =
+        activeTags.indexOf(tag) >= 0
+          ? activeTags.filter((a) => a != tag)
+          : [...activeTags, tag];
+
+      const params = new URLSearchParams(searchParams);
+      params.set(TAGS_SEARCH_PARAM, newTags.join(","));
+
+      return `/projects?${params.toString()}`;
+    },
+    [activeTags, searchParams],
+  );
 
   return (
     <div className="mx-auto flex max-w-7xl flex-row py-24">
@@ -12,18 +49,24 @@ export function ProjectsList() {
         <div className="text-lg">Filters</div>
         <div>
           {tags.map((tag) => (
-            <div key={tag} className="badge">
+            <Link
+              key={tag}
+              className={`badge m-1 ${
+                activeTags.indexOf(tag) >= 0 ? "badge-primary" : "badge-neutral"
+              }`}
+              href={getTagLink(tag)}
+            >
               {tag}
-            </div>
+            </Link>
           ))}
         </div>
       </div>
       <div className="flex max-h-[32rem] flex-row flex-wrap items-center justify-start overflow-y-auto px-4">
-        {projects.map((project) => (
+        {filteredProjects.map((project) => (
           <Link
             key={project.id}
             className="card bg-base-100 m-8 max-h-72 w-64 shadow-xl"
-            href={`/projects/${project.id}`}
+            href={`/projects/${project.id}?${searchParams.toString()}`}
           >
             <figure
               style={{ alignItems: "flex-start" }} // overriding .card figure styles

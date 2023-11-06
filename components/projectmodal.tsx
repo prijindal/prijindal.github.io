@@ -1,18 +1,20 @@
 "use client";
 import { capitalize } from "lodash";
-import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect } from "react";
+import { Carousel } from "./carousel";
 import { ColorGradients } from "./colors";
 import { Project } from "./helpers/project";
 
 export function ProjectModal({ project }: { project: Project }) {
+  const searchParams = useSearchParams();
+
   const router = useRouter();
 
   const closeModal = useCallback(() => {
-    router.back();
-  }, [router]);
+    router.push(`/projects?${searchParams.toString()}`);
+  }, [router, searchParams]);
 
   useEffect(() => {
     let modalElement: HTMLDialogElement | null;
@@ -40,41 +42,7 @@ export function ProjectModal({ project }: { project: Project }) {
         <div className="text-xl">{project.name}</div>
         <div className="text-lg">{project.description}</div>
 
-        <div className="carousel my-4 max-h-96 w-96">
-          {project.images.map((image, i) => (
-            <div
-              key={image}
-              id={`slide-${project.id}-${i}`}
-              className="carousel-item relative w-full"
-            >
-              <Image
-                width={400}
-                height={400}
-                src={image}
-                alt={`Image ${i} for ${project.id}`}
-                className="w-full object-cover object-top"
-              />
-              <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a
-                  href={`#slide-${project.id}-${
-                    i >= 1 ? i - 1 : project.images.length - 1
-                  }`}
-                  className="btn btn-circle"
-                >
-                  ❮
-                </a>
-                <a
-                  href={`#slide-${project.id}-${
-                    i < project.images.length - 1 ? i + 1 : 0
-                  }`}
-                  className="btn btn-circle"
-                >
-                  ❯
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
+        <Carousel images={project.images} />
 
         <div className="flex flex-row justify-start">
           {(
