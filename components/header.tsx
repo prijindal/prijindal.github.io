@@ -6,8 +6,6 @@ import { ColorGradients } from "./colors";
 export const Header = () => {
   const pathname = usePathname();
 
-  console.log(pathname);
-
   const links = [
     { name: "About Me", link: "/" },
     {
@@ -24,7 +22,7 @@ export const Header = () => {
     },
   ];
   return (
-    <div
+    <header
       className={`flex h-20 w-full flex-row justify-center ${ColorGradients.header}`}
     >
       <div
@@ -48,6 +46,6 @@ export const Header = () => {
           ))}
         </div>
       </div>
-    </div>
+    </header>
   );
 };
