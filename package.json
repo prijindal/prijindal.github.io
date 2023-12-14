@@ -9,6 +9,10 @@
     "lint": "next lint",
     "prettier": "prettier -c ."
   },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=10.0.0"
+  },
   "dependencies": {
     "lodash": "^4.17.21",
     "next": "14.0.1",
