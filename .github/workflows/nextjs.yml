@@ -85,6 +85,11 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           path: ./out
+      - name: Build standalone with Next.js
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        env:
+          NEXT_OUTPUT_TYPE: standalone
+      - run: npm ci --omit=dev
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
