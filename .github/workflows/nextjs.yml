@@ -109,6 +109,8 @@ jobs:
         run: npx next build
         env:
           NEXT_OUTPUT_TYPE: standalone
+      - run: ls -alh
+      - run: ls .next -alh
       - run: npm ci --omit=dev
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2

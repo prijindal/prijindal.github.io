@@ -1,7 +1,5 @@
 FROM node:18-alpine
 
-RUN apk add --no-cache dumb-init
-
 ENV NODE_ENV production
 
 USER node
@@ -14,4 +12,4 @@ COPY --chown=node:node .next /app/
 
 EXPOSE 4000
 
-CMD [ "dumb-init", "npm", "start"]
+CMD [ "npm", "start"]
