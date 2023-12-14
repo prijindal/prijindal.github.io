@@ -9,6 +9,7 @@ WORKDIR /app
 COPY --chown=node:node package*.json /app/
 COPY --chown=node:node node_modules /app/node_modules
 COPY --chown=node:node next.config.js /app/
+COPY --chown=node:node public /app/public
 COPY --chown=node:node .next /app/.next
 
 EXPOSE 4000
