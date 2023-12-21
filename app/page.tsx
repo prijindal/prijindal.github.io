@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div
       className={`mx-auto flex max-w-4xl ${
-        width > breakpoints.layout ? "flex-row" : "flex-col"
+        width <= breakpoints.layout ? "flex-col" : "flex-row"
       } items-center justify-between p-24`}
     >
       <div className="mx-2 mb-5 max-w-80">

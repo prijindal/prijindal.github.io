@@ -48,7 +48,7 @@ export const Footer = () => {
     >
       <div
         className={`flex h-full max-w-4xl flex-grow ${
-          width > breakpoints.layout ? "flex-row" : "flex-col"
+          width <= breakpoints.layout ? "flex-col" : "flex-row"
         } items-center justify-between ${ColorGradients.containers} p-5`}
       >
         <Links />

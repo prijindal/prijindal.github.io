@@ -49,12 +49,12 @@ export function ProjectsList() {
   return (
     <div
       className={`mx-10 flex max-w-full ${
-        width > breakpoints.projects ? "flex-row" : "flex-col"
+        width <= breakpoints.projects ? "flex-col" : "flex-row"
       } pt-24`}
     >
       <div
         className={`flex ${
-          width > breakpoints.projects ? "max-w-xs" : "max-w-6xl"
+          width <= breakpoints.projects ? "max-w-6xl" : "max-w-xs"
         } flex-col px-4`}
       >
         <div className="text-lg">Filters</div>

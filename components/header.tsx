@@ -72,16 +72,16 @@ export const Header = () => {
           )}
           Priyanshu Jindal
         </div>
-        {width > breakpoints.layout ? (
-          <div className="flex flex-row">
-            <Links pathname={pathname} />
-          </div>
-        ) : (
+        {width <= breakpoints.layout ? (
           <MobileAppDrawer open={open} setOpen={setOpen}>
             <div className="flex h-full w-80 flex-col justify-start p-2">
               <Links pathname={pathname} onLinkPress={() => setOpen(false)} />
             </div>
           </MobileAppDrawer>
+        ) : (
+          <div className="flex flex-row">
+            <Links pathname={pathname} />
+          </div>
         )}
       </div>
     </header>
