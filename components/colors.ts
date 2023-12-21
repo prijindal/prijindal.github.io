@@ -6,3 +6,7 @@ export const ColorGradients = {
   active: `bg-slate-800`,
   translucent: `bg-slate-900/30`,
 };
+
+export const breakpoints = {
+  layout: 720,
+};

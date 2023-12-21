@@ -1,9 +1,18 @@
+"use client";
+import { breakpoints } from "@/components/colors";
+import { useWindowWidth } from "@/components/helpers/window";
 import Image from "next/image";
 
 export default function Home() {
+  const width = useWindowWidth();
+
   return (
-    <div className="mx-auto flex max-w-4xl flex-row items-center justify-between p-24">
-      <div className="mx-2">
+    <div
+      className={`mx-auto flex max-w-4xl ${
+        width > breakpoints.layout ? "flex-row" : "flex-col"
+      } items-center justify-between p-24`}
+    >
+      <div className="mx-2 mb-5 max-w-80">
         <Image
           alt="prijindal profile pic"
           src="https://avatars.githubusercontent.com/u/10034872?v=4"
