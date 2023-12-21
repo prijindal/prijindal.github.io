@@ -9,4 +9,5 @@ export const ColorGradients = {
 
 export const breakpoints = {
   layout: 720,
+  projects: 1080,
 };

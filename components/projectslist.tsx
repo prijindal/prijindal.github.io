@@ -4,13 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useCallback, useMemo } from "react";
+import { breakpoints } from "./colors";
 import { Project, projects } from "./helpers/project";
+import { useWindowWidth } from "./helpers/window";
 
 const tags = uniq(projects.flatMap((a) => a.tags, []));
 
 const TAGS_SEARCH_PARAM = "tags";
 
 export function ProjectsList() {
+  const width = useWindowWidth();
   const searchParams = useSearchParams();
 
   const existingActiveTagsStr = searchParams.get(TAGS_SEARCH_PARAM);
@@ -44,8 +47,16 @@ export function ProjectsList() {
   );
 
   return (
-    <div className="mx-10 flex max-w-full flex-row pt-24">
-      <div className="flex max-w-xs flex-col px-4">
+    <div
+      className={`mx-10 flex max-w-full ${
+        width > breakpoints.projects ? "flex-row" : "flex-col"
+      } pt-24`}
+    >
+      <div
+        className={`flex ${
+          width > breakpoints.projects ? "max-w-xs" : "max-w-6xl"
+        } flex-col px-4`}
+      >
         <div className="text-lg">Filters</div>
         <div>
           {tags.map((tag) => (
@@ -65,7 +76,7 @@ export function ProjectsList() {
         {filteredProjects.map((project) => (
           <Link
             key={project.id}
-            className="card bg-base-100 m-8 max-h-72 w-64 shadow-xl"
+            className="card m-8 max-h-72 w-64 bg-base-100 shadow-xl"
             href={`/projects/${project.id}?${searchParams.toString()}`}
           >
             {project.images.length > 0 && (
