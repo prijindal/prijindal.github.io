@@ -22,6 +22,28 @@ export const projects: Project[] = [
   //   links: {},
   // },
   {
+    id: "journal_app",
+    name: "Journal App",
+    description: "An app to take journal notes",
+    images: [
+      "/projects/journal_app_1.jpg",
+      "/projects/journal_app_2.jpg",
+      "/projects/journal_app_3.jpg",
+      "/projects/journal_app_4.jpg",
+      "/projects/journal_app_5.jpg",
+      "/projects/journal_app_6.jpg",
+    ],
+    tags: ["flutter", "journal", "open_source"],
+    links: {
+      github: "https://github.com/prijindal/journal_app",
+      website: "https://journal-app-prijindal.web.app/",
+      android:
+        "https://play.google.com/store/apps/details?id=com.prijindal.journal_app",
+      builds:
+        "https://nightly.link/prijindal/journal_app/workflows/flutter/main",
+    },
+  },
+  {
     id: "f1_results",
     name: "F1 Results",
     description:
