@@ -6,11 +6,12 @@ export async function generateStaticParams() {
   return projects.map((a) => ({ project: a.id }));
 }
 
-export default function ProjectPage({
-  params,
-}: {
-  params: { project: string };
-}) {
+export default async function ProjectPage(
+  props: {
+    params: Promise<{ project: string }>;
+  }
+) {
+  const params = await props.params;
   const projectId = params.project;
   const project = projects.find((p) => p.id === projectId);
 
